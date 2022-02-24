@@ -1,6 +1,9 @@
 ### Hi I am Harry 👋
 
-10+ years professional certified full-stack developer.
+#### 10+ years professional certified full-stack developer.
+
+
+<a href="https://www.linkedin.com/in/harryji/" rel="nofollow"><img src="https://img.shields.io/badge/Harry%20Ji-blue?style=flat&logo=linkedin&labelColor=blue"></a>
 
 <!--
 **harryji168/harryji168** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
