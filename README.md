@@ -1,8 +1,8 @@
-### Hi I am Harry 👋
+# Hi I am Harry 👋
 
 #### 10+ years professional certified full-stack developer.
 
-
+### Contact Me:
 <a href="https://www.linkedin.com/in/harryji/" rel="nofollow"><img src="https://img.shields.io/badge/Harry%20Ji-blue?style=flat&logo=linkedin&labelColor=blue"></a>
 
 <!--
