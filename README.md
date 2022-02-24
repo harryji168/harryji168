@@ -3,7 +3,8 @@
 #### 10+ years professional certified full-stack developer.
 
 ### Contact Me:
-<a href="https://www.linkedin.com/in/harryji/" rel="nofollow"><img src="https://img.shields.io/badge/Harry%20Ji-blue?style=flat&logo=linkedin&labelColor=blue"></a>
+<a href="https://www.linkedin.com/in/harryji/" rel="nofollow"><img src="https://img.shields.io/badge/Harry-blue?style=flat&logo=linkedin&labelColor=blue"></a>
+<a href="mailto:jiharry@hotmail.com/" rel="nofollow"><img src="https://img.shields.io/badge/Harry-c0392b?style=flat&labelColor=c0392b&logo=gmail&logoColor=white"></a>
 
 <!--
 **harryji168/harryji168** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
