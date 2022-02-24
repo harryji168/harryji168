@@ -1,4 +1,6 @@
-### Hi there 👋
+### Hi I am Harry 👋
+
+10+ years professional certified full-stack developer.
 
 <!--
 **harryji168/harryji168** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
