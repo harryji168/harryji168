@@ -19,6 +19,9 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+
+<img src="https://img.shields.io/github/languages/count/harryji168/Summary_Notes">
+
 [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=harryji168)](https://github.com/anuraghazra/github-readme-stats)
 
 
