@@ -1,9 +1,11 @@
 # Hi I am Harry 👋
 
-#### 10+ years professional certified full-stack developer.
+#### 10+ years professional certified full-stack developer. my work enviroment like this:
+
+ ![Screenshot from 2022-07-19 16-28-41](https://user-images.githubusercontent.com/21187699/179864982-c0995dbb-389e-4ac3-b2a4-04b56aac5148.png)
 
 ### Contact Me:
-<a href="https://www.linkedin.com/in/harryji/" rel="nofollow"><img src="https://img.shields.io/badge/Harry-blue?style=flat&logo=linkedin&labelColor=blue"></a>
+<a href="https://www.linkedin.com/in/harryji/" rel="nofollow"><img  src="https://img.shields.io/badge/Harry-blue?style=flat&logo=linkedin&labelColor=blue"></a>
 <a href="mailto:jiharry@hotmail.com/" rel="nofollow"><img src="https://img.shields.io/badge/Harry-c0392b?style=flat&labelColor=c0392b&logo=gmail&logoColor=white"></a>
 
 ## Front-end
