@@ -1,5 +1,7 @@
-![1688148433085](https://github.com/harryji168/harryji168/assets/21187699/c484dfe8-33e8-47c2-a218-7c35c70907fc)
+![anoname_lg_vwx2315w_23_in_curved_monitor_in_the_style_of_psych_d770ae27-f31b-4135-acbc-e7c84936e6f6](https://github.com/harryji168/harryji168/assets/21187699/02e4b1bc-5624-4567-adb7-444af0f84d7f)
+
 # Hi I am Harry 👋
+
 
 #### Full-Stack Developer | Transforming Vision into Scalable Solutions | Expertise in Back-end, Front-end, Database, and Cross-functional Collaboration.
 
