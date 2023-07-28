@@ -3,7 +3,7 @@
 # Hi I am Harry 👋
 
 
-#### Full-Stack Developer | Transforming Vision into Scalable Solutions | Expertise in Back-end, Front-end, Database, and Cross-functional Collaboration.
+#### Full-Stack Developer | Transforming Vision into Scalable Solutions | Expertise in AI ( Automation, Improvement and Innovation ), Back-end, Front-end, Database (SQL/NoSQL), Cross-functional Collaboration.
 
 ### Contact Me:
 <a href="https://www.linkedin.com/in/harryji/" rel="nofollow"><img  src="https://img.shields.io/badge/Harry-blue?style=flat&logo=linkedin&labelColor=blue"></a>
