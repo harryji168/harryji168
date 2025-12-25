@@ -1,0 +1,551 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" style="background-color: #0a0e27; font-family: monospace;">
+  <!-- Definitions -->
+  <defs>
+    <!-- Happy Gradient (warm, inviting) -->
+    <radialGradient id="radar-gradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+    
+    <!-- Secure Connection Gradient -->
+    <linearGradient id="secure-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="50%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    
+    <!-- Plane Icon -->
+    <path id="plane-icon" d="M0,-10 L-8,5 L0,2 L8,5 Z" fill="#ffffff" stroke="none" transform="rotate(45)"/>
+    
+    <!-- Shield Icon (Security) -->
+    <path id="shield" d="M0,-8 L-6,0 L-6,6 L0,10 L6,6 L6,0 Z" fill="#10b981" stroke="#34d399" stroke-width="1"/>
+    
+    <!-- Heart Icon (Social/Happy) -->
+    <path id="heart" d="M0,-3 C-1,-5 -4,-5 -4,-2 C-4,1 0,4 0,4 C0,4 4,1 4,-2 C4,-5 1,-5 0,-3 Z" fill="#ec4899" stroke="none"/>
+    
+    <!-- Star Icon (Happy) -->
+    <path id="star" d="M0,-5 L-1.5,-1.5 L-5,-1 L-2.5,1 L-3,5 L0,3 L3,5 L2.5,1 L5,-1 L1.5,-1.5 Z" fill="#fbbf24" stroke="none"/>
+    
+    <!-- Lock Icon (Secure) -->
+    <g id="lock">
+      <rect x="-3" y="-1" width="6" height="5" rx="1" fill="#3b82f6"/>
+      <path d="M-2,-1 L-2,-3 C-2,-4.5 -1,-5.5 0,-5.5 C1,-5.5 2,-4.5 2,-3 L2,-1" stroke="#3b82f6" stroke-width="1.5" fill="none"/>
+    </g>
+    
+    <!-- Smiley Face (Happy) -->
+    <g id="smiley">
+      <circle cx="0" cy="0" r="6" fill="#fbbf24" stroke="#fcd34d" stroke-width="1"/>
+      <circle cx="-2" cy="-1" r="1" fill="#0a0e27"/>
+      <circle cx="2" cy="-1" r="1" fill="#0a0e27"/>
+      <path d="M-3,1 Q0,4 3,1" stroke="#0a0e27" stroke-width="1" fill="none" stroke-linecap="round"/>
+    </g>
+    
+    <!-- Maple Leaf Path Definition -->
+    <path id="maple-path" d="
+      M 400 550 
+      L 400 500
+      L 350 510
+      L 360 460
+      L 280 440
+      L 330 390
+      L 290 320
+      L 360 340
+      L 360 270
+      L 400 180
+      L 440 270
+      L 440 340
+      L 510 320
+      L 470 390
+      L 520 440
+      L 440 460
+      L 450 510
+      L 400 500
+      " fill="none" />
+      
+    <!-- Social Network Paths -->
+    <path id="social-path-1" d="M 150 150 Q 250 200 350 180" fill="none"/>
+    <path id="social-path-2" d="M 650 150 Q 550 200 450 180" fill="none"/>
+    <path id="social-path-3" d="M 200 450 Q 300 400 400 420" fill="none"/>
+    
+    <!-- Happy People Icons -->
+    <!-- Person waving (arms up) -->
+    <g id="person-waving">
+      <circle cx="0" cy="-8" r="3" fill="#fbbf24"/>
+      <line x1="0" y1="-5" x2="0" y2="2" stroke="#fbbf24" stroke-width="2" stroke-linecap="round"/>
+      <line x1="0" y1="-3" x2="-4" y2="-6" stroke="#fbbf24" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="0" y1="-3" x2="4" y2="-6" stroke="#fbbf24" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="0" y1="2" x2="-3" y2="7" stroke="#fbbf24" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="0" y1="2" x2="3" y2="7" stroke="#fbbf24" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    
+    <!-- Person celebrating (one arm up) -->
+    <g id="person-celebrating">
+      <circle cx="0" cy="-8" r="3" fill="#ec4899"/>
+      <line x1="0" y1="-5" x2="0" y2="2" stroke="#ec4899" stroke-width="2" stroke-linecap="round"/>
+      <line x1="0" y1="-3" x2="-3" y2="0" stroke="#ec4899" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="0" y1="-3" x2="4" y2="-7" stroke="#ec4899" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="0" y1="2" x2="-3" y2="7" stroke="#ec4899" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="0" y1="2" x2="3" y2="7" stroke="#ec4899" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    
+    <!-- Person happy (arms out) -->
+    <g id="person-happy">
+      <circle cx="0" cy="-8" r="3" fill="#10b981"/>
+      <line x1="0" y1="-5" x2="0" y2="2" stroke="#10b981" stroke-width="2" stroke-linecap="round"/>
+      <line x1="0" y1="-2" x2="-5" y2="-2" stroke="#10b981" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="0" y1="-2" x2="5" y2="-2" stroke="#10b981" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="0" y1="2" x2="-3" y2="7" stroke="#10b981" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="0" y1="2" x2="3" y2="7" stroke="#10b981" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    
+    <!-- Person jumping (Y pose) -->
+    <g id="person-jumping">
+      <circle cx="0" cy="-9" r="3" fill="#3b82f6"/>
+      <line x1="0" y1="-6" x2="0" y2="1" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
+      <line x1="0" y1="-4" x2="-4" y2="-8" stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="0" y1="-4" x2="4" y2="-8" stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="0" y1="1" x2="-4" y2="5" stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="0" y1="1" x2="4" y2="5" stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+  </defs>
+
+  <!-- CANADA MAP BACKGROUND -->
+  
+  <!-- Ocean/Water Background -->
+  <rect x="0" y="0" width="800" height="600" fill="#0f1c2e" opacity="0.3"/>
+  
+  <!-- Pacific Ocean -->
+  <ellipse cx="80" cy="300" rx="60" ry="200" fill="#1e3a5f" opacity="0.35"/>
+  
+  <!-- Atlantic Ocean -->
+  <ellipse cx="720" cy="350" rx="60" ry="180" fill="#1e3a5f" opacity="0.35"/>
+  
+  <!-- Arctic Ocean (North) -->
+  <ellipse cx="400" cy="50" rx="300" ry="40" fill="#1e3a5f" opacity="0.25"/>
+  
+  <!-- Hudson Bay -->
+  <ellipse cx="380" cy="200" rx="80" ry="100" fill="#1e3a5f" opacity="0.3"/>
+  
+  <!-- Great Lakes -->
+  <ellipse cx="480" cy="420" rx="90" ry="50" fill="#1e3a5f" opacity="0.35"/>
+  <ellipse cx="520" cy="400" rx="60" ry="35" fill="#1e3a5f" opacity="0.3"/>
+  <circle cx="450" cy="440" r="30" fill="#1e3a5f" opacity="0.3"/>
+  
+  <!-- CANADA LANDMASS (Simplified outline) -->
+  <path d="M 50 150 
+           L 100 120 L 150 100 L 200 90 L 250 85 L 300 80 L 350 85 L 400 80 L 450 85 L 500 90 L 550 100 L 600 120 L 650 140
+           L 700 180 L 720 220 L 730 260 L 735 300 L 730 340 L 720 380 L 700 410 L 680 430
+           L 650 445 L 600 455 L 550 460 L 500 465 L 450 468 L 400 470 L 350 468 L 300 465 L 250 460 L 200 450 L 150 435
+           L 120 420 L 100 400 L 85 380 L 75 360 L 70 340 L 65 320 L 60 300 L 55 280 L 50 260 L 48 240 L 47 220 L 48 200 L 50 180
+           Z" 
+        fill="#1a2332" opacity="0.35" stroke="#2d3748" stroke-width="1.5"/>
+  
+  <!-- Province Boundaries (subtle) -->
+  <!-- BC/AB border -->
+  <line x1="180" y1="150" x2="180" y2="420" stroke="#374151" stroke-width="0.5" opacity="0.2" stroke-dasharray="3,3"/>
+  <!-- AB/SK border -->
+  <line x1="250" y1="180" x2="250" y2="430" stroke="#374151" stroke-width="0.5" opacity="0.2" stroke-dasharray="3,3"/>
+  <!-- SK/MB border -->
+  <line x1="320" y1="200" x2="320" y2="440" stroke="#374151" stroke-width="0.5" opacity="0.2" stroke-dasharray="3,3"/>
+  <!-- MB/ON border -->
+  <line x1="400" y1="220" x2="400" y2="450" stroke="#374151" stroke-width="0.5" opacity="0.2" stroke-dasharray="3,3"/>
+  <!-- ON/QC border -->
+  <line x1="520" y1="240" x2="520" y2="460" stroke="#374151" stroke-width="0.5" opacity="0.2" stroke-dasharray="3,3"/>
+  
+  <!-- Trans-Canada Highway -->
+  <path d="M 120 350 Q 200 340 280 345 Q 360 350 440 355 Q 520 360 600 365 Q 650 368 690 375" 
+        stroke="#374151" stroke-width="1.5" stroke-dasharray="8,4" opacity="0.25" fill="none"/>
+  
+  <!-- MAJOR CITIES ACROSS CANADA -->
+  
+  <!-- Vancouver (YVR) - West Coast -->
+  <g transform="translate(140, 360)">
+    <circle cx="0" cy="0" r="7" fill="#ec4899" opacity="0.2"/>
+    <circle cx="0" cy="0" r="3.5" fill="#ec4899" opacity="0.6"/>
+    <circle cx="0" cy="0" r="2" fill="#ec4899"/>
+    <text x="8" y="4" fill="#ec4899" font-size="8" opacity="0.6">YVR</text>
+  </g>
+  
+  <!-- Calgary (YYC) - Alberta -->
+  <g transform="translate(210, 320)">
+    <circle cx="0" cy="0" r="6" fill="#f59e0b" opacity="0.2"/>
+    <circle cx="0" cy="0" r="3" fill="#f59e0b" opacity="0.6"/>
+    <circle cx="0" cy="0" r="1.5" fill="#f59e0b"/>
+    <text x="8" y="4" fill="#f59e0b" font-size="8" opacity="0.5">YYC</text>
+  </g>
+  
+  <!-- Edmonton (YEG) - Alberta -->
+  <g transform="translate(210, 260)">
+    <circle cx="0" cy="0" r="5" fill="#f59e0b" opacity="0.2"/>
+    <circle cx="0" cy="0" r="2.5" fill="#f59e0b" opacity="0.6"/>
+    <circle cx="0" cy="0" r="1.5" fill="#f59e0b"/>
+    <text x="8" y="4" fill="#f59e0b" font-size="7" opacity="0.5">YEG</text>
+  </g>
+  
+  <!-- Winnipeg (YWG) - Manitoba -->
+  <g transform="translate(350, 340)">
+    <circle cx="0" cy="0" r="6" fill="#8b5cf6" opacity="0.2"/>
+    <circle cx="0" cy="0" r="3" fill="#8b5cf6" opacity="0.6"/>
+    <circle cx="0" cy="0" r="1.5" fill="#8b5cf6"/>
+    <text x="8" y="4" fill="#8b5cf6" font-size="8" opacity="0.5">YWG</text>
+  </g>
+  
+  <!-- Toronto (YYZ) - Ontario (MAIN HUB) -->
+  <g transform="translate(480, 400)">
+    <circle cx="0" cy="0" r="10" fill="#fbbf24" opacity="0.25"/>
+    <circle cx="0" cy="0" r="6" fill="#fbbf24" opacity="0.5"/>
+    <circle cx="0" cy="0" r="3" fill="#fbbf24"/>
+    <text x="12" y="4" fill="#fbbf24" font-size="10" opacity="0.7" font-weight="bold">YYZ</text>
+  </g>
+  
+  <!-- Ottawa (YOW) - Ontario/Capital -->
+  <g transform="translate(520, 380)">
+    <circle cx="0" cy="0" r="7" fill="#10b981" opacity="0.2"/>
+    <circle cx="0" cy="0" r="4" fill="#10b981" opacity="0.6"/>
+    <circle cx="0" cy="0" r="2" fill="#10b981"/>
+    <text x="9" y="4" fill="#10b981" font-size="8" opacity="0.6">YOW</text>
+    <text x="9" y="-8" fill="#10b981" font-size="6" opacity="0.5">★</text>
+  </g>
+  
+  <!-- Montreal (YUL) - Quebec -->
+  <g transform="translate(560, 390)">
+    <circle cx="0" cy="0" r="7" fill="#3b82f6" opacity="0.2"/>
+    <circle cx="0" cy="0" r="3.5" fill="#3b82f6" opacity="0.6"/>
+    <circle cx="0" cy="0" r="2" fill="#3b82f6"/>
+    <text x="9" y="4" fill="#3b82f6" font-size="8" opacity="0.6">YUL</text>
+  </g>
+  
+  <!-- Quebec City (YQB) - Quebec -->
+  <g transform="translate(590, 370)">
+    <circle cx="0" cy="0" r="5" fill="#3b82f6" opacity="0.2"/>
+    <circle cx="0" cy="0" r="2.5" fill="#3b82f6" opacity="0.6"/>
+    <circle cx="0" cy="0" r="1.5" fill="#3b82f6"/>
+    <text x="7" y="4" fill="#3b82f6" font-size="7" opacity="0.5">YQB</text>
+  </g>
+  
+  <!-- Halifax (YHZ) - Nova Scotia -->
+  <g transform="translate(670, 410)">
+    <circle cx="0" cy="0" r="6" fill="#06b6d4" opacity="0.2"/>
+    <circle cx="0" cy="0" r="3" fill="#06b6d4" opacity="0.6"/>
+    <circle cx="0" cy="0" r="1.5" fill="#06b6d4"/>
+    <text x="8" y="4" fill="#06b6d4" font-size="8" opacity="0.5">YHZ</text>
+  </g>
+  
+  <!-- St. John's (YYT) - Newfoundland -->
+  <g transform="translate(720, 380)">
+    <circle cx="0" cy="0" r="5" fill="#06b6d4" opacity="0.2"/>
+    <circle cx="0" cy="0" r="2.5" fill="#06b6d4" opacity="0.6"/>
+    <circle cx="0" cy="0" r="1.5" fill="#06b6d4"/>
+    <text x="7" y="4" fill="#06b6d4" font-size="7" opacity="0.5">YYT</text>
+  </g>
+  
+  <!-- Rocky Mountains (West) -->
+  <circle cx="160" cy="280" r="40" fill="#1f2937" opacity="0.15"/>
+  <circle cx="175" cy="300" r="35" fill="#1f2937" opacity="0.12"/>
+  <circle cx="165" cy="320" r="30" fill="#1f2937" opacity="0.1"/>
+  
+  <!-- Canadian Shield (Central) -->
+  <circle cx="350" cy="250" r="50" fill="#1f2937" opacity="0.08"/>
+  <circle cx="420" cy="280" r="45" fill="#1f2937" opacity="0.08"/>
+  
+  <!-- Appalachian Mountains (East) -->
+  <circle cx="620" cy="400" r="35" fill="#1f2937" opacity="0.12"/>
+  <circle cx="640" cy="420" r="30" fill="#1f2937" opacity="0.1"/>
+  
+  <!-- HAPPY PEOPLE AT CITIES -->
+  
+  <!-- Vancouver - Person waving -->
+  <g transform="translate(125, 540)">
+    <use href="#person-waving" transform="scale(1.2)">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-3; 0,0" dur="2s" repeatCount="indefinite"/>
+    </use>
+  </g>
+  
+  <!-- Vancouver - Person celebrating -->
+  <g transform="translate(155, 535)">
+    <use href="#person-celebrating" transform="scale(1.1)">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-2; 0,0" dur="2.5s" repeatCount="indefinite"/>
+    </use>
+  </g>
+  
+  <!-- Calgary - Person jumping -->
+  <g transform="translate(195, 545)">
+    <use href="#person-jumping" transform="scale(1.1)">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-4; 0,0" dur="1.8s" repeatCount="indefinite"/>
+    </use>
+  </g>
+  
+  <!-- Calgary - Person happy -->
+  <g transform="translate(225, 540)">
+    <use href="#person-happy" transform="scale(1.0)">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-2; 0,0" dur="2.2s" repeatCount="indefinite"/>
+    </use>
+  </g>
+  
+  <!-- Winnipeg - Person waving -->
+  <g transform="translate(335, 550)">
+    <use href="#person-waving" transform="scale(1.1)">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-3; 0,0" dur="2.3s" repeatCount="indefinite"/>
+    </use>
+  </g>
+  
+  <!-- Winnipeg - Person celebrating -->
+  <g transform="translate(365, 545)">
+    <use href="#person-celebrating" transform="scale(1.0)">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-2; 0,0" dur="2.6s" repeatCount="indefinite"/>
+    </use>
+  </g>
+  
+  <!-- Toronto - Person jumping (main hub, more people) -->
+  <g transform="translate(460, 555)">
+    <use href="#person-jumping" transform="scale(1.3)">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-5; 0,0" dur="1.5s" repeatCount="indefinite"/>
+    </use>
+  </g>
+  
+  <!-- Toronto - Person waving -->
+  <g transform="translate(485, 560)">
+    <use href="#person-waving" transform="scale(1.2)">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-3; 0,0" dur="2.1s" repeatCount="indefinite"/>
+    </use>
+  </g>
+  
+  <!-- Toronto - Person happy -->
+  <g transform="translate(505, 555)">
+    <use href="#person-happy" transform="scale(1.2)">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-2; 0,0" dur="2.4s" repeatCount="indefinite"/>
+    </use>
+  </g>
+  
+  <!-- Ottawa - Person celebrating (capital city) -->
+  <g transform="translate(510, 550)">
+    <use href="#person-celebrating" transform="scale(1.1)">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-3; 0,0" dur="2.0s" repeatCount="indefinite"/>
+    </use>
+  </g>
+  
+  <!-- Ottawa - Person waving -->
+  <g transform="translate(535, 545)">
+    <use href="#person-waving" transform="scale(1.0)">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-2; 0,0" dur="2.5s" repeatCount="indefinite"/>
+    </use>
+  </g>
+  
+  <!-- Montreal - Person happy -->
+  <g transform="translate(545, 555)">
+    <use href="#person-happy" transform="scale(1.2)">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-3; 0,0" dur="2.2s" repeatCount="indefinite"/>
+    </use>
+  </g>
+  
+  <!-- Montreal - Person jumping -->
+  <g transform="translate(575, 550)">
+    <use href="#person-jumping" transform="scale(1.1)">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-4; 0,0" dur="1.9s" repeatCount="indefinite"/>
+    </use>
+  </g>
+  
+  <!-- Halifax - Person waving -->
+  <g transform="translate(655, 560)">
+    <use href="#person-waving" transform="scale(1.1)">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-3; 0,0" dur="2.3s" repeatCount="indefinite"/>
+    </use>
+  </g>
+  
+  <!-- Halifax - Person celebrating -->
+  <g transform="translate(685, 555)">
+    <use href="#person-celebrating" transform="scale(1.0)">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-2; 0,0" dur="2.6s" repeatCount="indefinite"/>
+    </use>
+  </g>
+  
+  <!-- Random happy people in other locations -->
+  <!-- Person near Edmonton -->
+  <g transform="translate(195, 530)">
+    <use href="#person-happy" transform="scale(0.9)">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-2; 0,0" dur="2.7s" repeatCount="indefinite"/>
+    </use>
+  </g>
+  
+  <!-- Person near Quebec City -->
+  <g transform="translate(605, 540)">
+    <use href="#person-celebrating" transform="scale(0.9)">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-2; 0,0" dur="2.4s" repeatCount="indefinite"/>
+    </use>
+  </g>
+  
+  <!-- Person in central Canada -->
+  <g transform="translate(280, 550)">
+    <use href="#person-waving" transform="scale(0.8)">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-2; 0,0" dur="2.8s" repeatCount="indefinite"/>
+    </use>
+  </g>
+  
+  <!-- Person in Atlantic region -->
+  <g transform="translate(630, 545)">
+    <use href="#person-jumping" transform="scale(0.9)">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-3; 0,0" dur="2.1s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  
+  <!-- Animated Background Glow -->
+  <circle cx="400" cy="300" r="280" fill="url(#radar-gradient)">
+    <animate attributeName="opacity" values="0.3;0.6;0.3" dur="4s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Radar Grid with Happy Colors -->
+  <circle cx="400" cy="300" r="100" stroke="#8b5cf6" stroke-width="1" fill="none" opacity="0.4"/>
+  <circle cx="400" cy="300" r="200" stroke="#3b82f6" stroke-width="1" fill="none" opacity="0.4"/>
+  <circle cx="400" cy="300" r="280" stroke="#10b981" stroke-width="1" fill="none" opacity="0.4"/>
+  
+  <!-- Grid Lines -->
+  <line x1="400" y1="20" x2="400" y2="580" stroke="#374151" stroke-width="1" opacity="0.3"/>
+  <line x1="120" y1="300" x2="680" y2="300" stroke="#374151" stroke-width="1" opacity="0.3"/>
+
+  <!-- Security Badges in Corners -->
+  <g transform="translate(50, 100)">
+    <use href="#shield"/>
+    <text x="10" y="2" fill="#10b981" font-size="10">SECURE</text>
+  </g>
+  
+  <g transform="translate(740, 100)">
+    <use href="#lock"/>
+    <text x="-45" y="2" fill="#3b82f6" font-size="10">ENCRYPTED</text>
+  </g>
+
+  <!-- Happy Status Text -->
+  <text x="30" y="40" fill="#fbbf24" font-size="14" letter-spacing="2" font-weight="bold">
+    ✈️ SOCIAL FLIGHT NETWORK
+  </text>
+  <text x="30" y="60" fill="#10b981" font-size="14" letter-spacing="2">
+    🔒 SECURE • 😊 HAPPY • 🤝 CONNECTED
+  </text>
+  <text x="680" y="580" fill="#8b5cf6" font-size="12" text-anchor="end" font-weight="bold">
+    ONTARIO SECTOR ✨
+  </text>
+
+  <!-- Social Connection Lines (animated) -->
+  <line x1="150" y1="150" x2="400" y2="300" stroke="url(#secure-gradient)" stroke-width="2" opacity="0.5" stroke-dasharray="5,5">
+    <animate attributeName="stroke-dashoffset" from="0" to="20" dur="2s" repeatCount="indefinite"/>
+  </line>
+  <line x1="650" y1="150" x2="400" y2="300" stroke="url(#secure-gradient)" stroke-width="2" opacity="0.5" stroke-dasharray="5,5">
+    <animate attributeName="stroke-dashoffset" from="0" to="20" dur="2s" repeatCount="indefinite"/>
+  </line>
+  <line x1="200" y1="450" x2="400" y2="300" stroke="url(#secure-gradient)" stroke-width="2" opacity="0.5" stroke-dasharray="5,5">
+    <animate attributeName="stroke-dashoffset" from="0" to="20" dur="2s" repeatCount="indefinite"/>
+  </line>
+  <line x1="600" y1="450" x2="400" y2="300" stroke="url(#secure-gradient)" stroke-width="2" opacity="0.5" stroke-dasharray="5,5">
+    <animate attributeName="stroke-dashoffset" from="0" to="20" dur="2s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Social Network Nodes with Happy Icons -->
+  <g transform="translate(150, 150)">
+    <circle cx="0" cy="0" r="15" fill="#1e293b" stroke="#ec4899" stroke-width="2"/>
+    <use href="#heart" transform="scale(1.5)"/>
+    <animate attributeName="opacity" values="1;0.6;1" dur="3s" repeatCount="indefinite"/>
+  </g>
+  
+  <g transform="translate(650, 150)">
+    <circle cx="0" cy="0" r="15" fill="#1e293b" stroke="#fbbf24" stroke-width="2"/>
+    <use href="#star" transform="scale(1.5)"/>
+    <animate attributeName="opacity" values="1;0.6;1" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+  </g>
+  
+  <g transform="translate(200, 450)">
+    <circle cx="0" cy="0" r="15" fill="#1e293b" stroke="#10b981" stroke-width="2"/>
+    <use href="#shield" transform="scale(1.5)"/>
+    <animate attributeName="opacity" values="1;0.6;1" dur="3s" begin="1s" repeatCount="indefinite"/>
+  </g>
+  
+  <g transform="translate(600, 450)">
+    <circle cx="0" cy="0" r="15" fill="#1e293b" stroke="#3b82f6" stroke-width="2"/>
+    <use href="#lock" transform="scale(1.5)"/>
+    <animate attributeName="opacity" values="1;0.6;1" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- Central Hub (Main Plane) -->
+  <g transform="translate(400, 300)">
+    <circle cx="0" cy="0" r="20" fill="#1e293b" stroke="url(#secure-gradient)" stroke-width="3">
+      <animate attributeName="r" values="20;25;20" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <use href="#smiley"/>
+  </g>
+
+  <!-- The Main Flight Path (Maple Leaf) -->
+  
+  <!-- 1. Faint Planned Path with Happy Color -->
+  <use href="#maple-path" stroke="#8b5cf6" stroke-width="2" stroke-dasharray="5,5" opacity="0.4"/>
+
+  <!-- 2. Active Secure Path (animated with gradient) -->
+  <use href="#maple-path" stroke="url(#secure-gradient)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <animate attributeName="stroke-dasharray" from="0, 3000" to="3000, 0" dur="10s" repeatCount="indefinite"/>
+  </use>
+
+  <!-- 3. The Main Airplane with Security Badge -->
+  <g>
+    <use href="#plane-icon" fill="#fbbf24">
+      <animate attributeName="fill" values="#fbbf24;#ec4899;#10b981;#3b82f6;#fbbf24" dur="10s" repeatCount="indefinite"/>
+    </use>
+    <!-- Security indicator on plane -->
+    <g transform="translate(8, -8)">
+      <use href="#shield" transform="scale(0.6)"/>
+    </g>
+    <animateMotion dur="10s" repeatCount="indefinite" rotate="auto">
+      <mpath href="#maple-path"/>
+    </animateMotion>
+  </g>
+  
+  <!-- Additional Social Planes -->
+  <g opacity="0.7">
+    <use href="#plane-icon" fill="#ec4899" transform="scale(0.8)"/>
+    <g transform="translate(6, -6)">
+      <use href="#heart" transform="scale(0.5)"/>
+    </g>
+    <animateMotion dur="8s" repeatCount="indefinite" rotate="auto">
+      <mpath href="#social-path-1"/>
+    </animateMotion>
+  </g>
+  
+  <g opacity="0.7">
+    <use href="#plane-icon" fill="#10b981" transform="scale(0.8)"/>
+    <g transform="translate(6, -6)">
+      <use href="#lock" transform="scale(0.4)"/>
+    </g>
+    <animateMotion dur="7s" repeatCount="indefinite" rotate="auto">
+      <mpath href="#social-path-2"/>
+    </animateMotion>
+  </g>
+  
+  <g opacity="0.7">
+    <use href="#plane-icon" fill="#3b82f6" transform="scale(0.8)"/>
+    <g transform="translate(6, -6)">
+      <use href="#star" transform="scale(0.5)"/>
+    </g>
+    <animateMotion dur="9s" repeatCount="indefinite" rotate="auto">
+      <mpath href="#social-path-3"/>
+    </animateMotion>
+  </g>
+
+  <!-- Floating Happy Elements -->
+  <g transform="translate(100, 250)">
+    <use href="#star" transform="scale(2)">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-20; 0,0" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite"/>
+    </use>
+  </g>
+  
+  <g transform="translate(700, 350)">
+    <use href="#heart" transform="scale(2)">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-15; 0,0" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="4s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <!-- Security Pulse Effect -->
+  <circle cx="400" cy="300" r="30" fill="none" stroke="#10b981" stroke-width="2" opacity="0">
+    <animate attributeName="r" values="30;100;150" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8;0.3;0" dur="3s" repeatCount="indefinite"/>
+  </circle>
+
+</svg>
